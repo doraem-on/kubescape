@@ -25,12 +25,7 @@ import (
 
 const MAX_REPORT_SIZE = 2097152 // 2 MB
 
-type SubmitContext string
 
-const (
-	SubmitContextScan       SubmitContext = "scan"
-	SubmitContextRepository SubmitContext = "repository"
-)
 
 var _ reporter.IReport = &ReportEventReceiver{}
 
@@ -40,16 +35,14 @@ type ReportEventReceiver struct {
 	tenantConfig       cautils.ITenantConfig
 	message            string
 	reportID           string
-	submitContext      SubmitContext
 	accountIdGenerated bool
 }
 
-func NewReportEventReceiver(tenantConfig cautils.ITenantConfig, reportID string, submitContext SubmitContext, client *client.KSCloudAPI) *ReportEventReceiver {
+func NewReportEventReceiver(tenantConfig cautils.ITenantConfig, reportID string, client *client.KSCloudAPI) *ReportEventReceiver {
 	return &ReportEventReceiver{
 		client:        client,
 		tenantConfig:  tenantConfig,
 		reportID:      reportID,
-		submitContext: submitContext,
 	}
 }
 

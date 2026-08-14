@@ -84,7 +84,6 @@ func TestDisplayMessage(t *testing.T) {
 				accountID:   "1234",
 			},
 			"",
-			SubmitContextScan,
 			getter.GetKSCloudAPIConnector(),
 		)
 
@@ -109,7 +108,6 @@ func TestDisplayMessage(t *testing.T) {
 				accountID:   "1234",
 			},
 			"",
-			SubmitContextScan,
 			getter.GetKSCloudAPIConnector(),
 		)
 		reporter.setMessage("message returned from server")
@@ -151,7 +149,6 @@ func TestPrepareReport(t *testing.T) {
 				accountID:   "1e3ae7c4-a8bb-4d7c-9bdf-eb86bc25e6bb",
 			},
 			"",
-			SubmitContextScan,
 			getter.GetKSCloudAPIConnector(),
 		)
 
@@ -201,7 +198,6 @@ func TestSubmit(t *testing.T) {
 				accessKey:   accessKey,
 			},
 			"cbabd56f-bac6-416a-836b-b815ef347647",
-			SubmitContextScan,
 			ksCloud,
 		)
 
@@ -226,7 +222,6 @@ func TestSubmit(t *testing.T) {
 				accountID:   "",
 			},
 			"cbabd56f-bac6-416a-836b-b815ef347647",
-			SubmitContextScan,
 			ksCloud,
 		)
 
@@ -267,7 +262,6 @@ func TestSubmit(t *testing.T) {
 				accessKey:   accessKey,
 			},
 			"cbabd56f-bac6-416a-836b-b815ef347647",
-			SubmitContextScan,
 			ksCloud,
 		)
 
@@ -312,7 +306,6 @@ func TestSetters(t *testing.T) {
 			accountID:   "1e3ae7c4-a8bb-4d7c-9bdf-eb86bc25e6bb",
 		},
 		"cbabd56f-bac6-416a-836b-b815ef347647",
-		SubmitContextScan,
 		getter.GetKSCloudAPIConnector(),
 	)
 
