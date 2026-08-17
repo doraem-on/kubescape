@@ -38,11 +38,9 @@ type PrettyPrinter struct {
 	inputPatterns   []string
 	verboseMode     bool
 	printAttackTree bool
-	showEvidence    bool
-	showSecrets     bool
 }
 
-func NewPrettyPrinter(verboseMode bool, formatVersion string, attackTree bool, viewType cautils.ViewTypes, scanType cautils.ScanTypes, inputPatterns []string, clusterName string, showEvidence bool, showSecrets bool) *PrettyPrinter {
+func NewPrettyPrinter(verboseMode bool, formatVersion string, attackTree bool, viewType cautils.ViewTypes, scanType cautils.ScanTypes, inputPatterns []string, clusterName string) *PrettyPrinter {
 	prettyPrinter := &PrettyPrinter{
 		verboseMode:     verboseMode,
 		formatVersion:   formatVersion,
@@ -51,8 +49,6 @@ func NewPrettyPrinter(verboseMode bool, formatVersion string, attackTree bool, v
 		scanType:        scanType,
 		inputPatterns:   inputPatterns,
 		clusterName:     clusterName,
-		showEvidence:    showEvidence,
-		showSecrets:     showSecrets,
 	}
 
 	return prettyPrinter
